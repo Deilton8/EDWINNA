@@ -65,7 +65,7 @@ body {
 .animate-marquee {
     display: flex;
     width: 200%;
-    animation: marquee 20s linear infinite;
+    animation: marquee 10s linear infinite;
 }
 
 .text-outline {
@@ -99,4 +99,14 @@ body {
 
 .animate-spin-slow {
     animation: spin-slow 12s linear infinite;
+}
+
+#mobile-menu {
+    will-change: transform;
+    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+}
+
+/* Garante que o ícone do menu no navbar seja visível */
+#navbar button i {
+    stroke-width: 2.5px;
 }
