@@ -52,6 +52,16 @@ body {
     opacity: 0;
 }
 
+/* Substitua a regra .animate-marquee no seu style.css por esta: */
+.animate-marquee {
+    display: flex;
+    width: max-content;
+    /* Ajusta ao tamanho real do conteúdo */
+    animation: marquee 10s linear infinite;
+    /* Aumentei o tempo para 30s para ficar mais elegante */
+    will-change: transform;
+}
+
 @keyframes marquee {
     0% {
         transform: translateX(0);
@@ -59,13 +69,13 @@ body {
 
     100% {
         transform: translateX(-50%);
+        /* Move apenas metade (o primeiro bloco) */
     }
 }
 
-.animate-marquee {
-    display: flex;
-    width: 200%;
-    animation: marquee 10s linear infinite;
+/* Opcional: Pausar ao passar o mouse para facilitar a leitura */
+.animate-marquee:hover {
+    animation-play-state: paused;
 }
 
 .text-outline {
@@ -103,7 +113,7 @@ body {
 
 #mobile-menu {
     will-change: transform;
-    box-shadow: -10px 0 30px rgba(0,0,0,0.1);
+    box-shadow: -10px 0 30px rgba(0, 0, 0, 0.1);
 }
 
 /* Garante que o ícone do menu no navbar seja visível */
