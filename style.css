@@ -120,3 +120,28 @@ body {
 #navbar button i {
     stroke-width: 2.5px;
 }
+
+.animate-marquee {
+    display: flex;
+    width: max-content;
+    animation: marquee 10s linear infinite;
+    /* Tempo ajustado para logos */
+    will-change: transform;
+}
+
+@keyframes marquee {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+
+    /* Move metade do conteúdo duplicado */
+}
+
+/* Pausa elegante ao passar o mouse */
+.group:hover .animate-marquee {
+    animation-play-state: paused;
+}
